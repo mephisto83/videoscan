@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'A': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   server: {
@@ -16,7 +16,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser',
+    minify: 'esbuild',
     reportCompressedSize: true,
   },
 })

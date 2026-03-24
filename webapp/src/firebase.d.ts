@@ -1,0 +1,7 @@
+import { GoogleAuthProvider } from 'firebase/auth';
+declare const app: import("@firebase/app").FirebaseApp;
+export declare const auth: import("firebase/auth").Auth;
+export declare const googleProvider: GoogleAuthProvider;
+export declare const db: import("@firebase/firestore").Firestore;
+export default app;
+//# sourceMappingURL=firebase.d.ts.map

@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Navigation from 'A/components/Navigation';
-import LandingPage from 'A/components/LandingPage';
+import Navigation from '@/components/Navigation';
+import LandingPage from '@/components/LandingPage';
 import PricingPage from '@/components/PricingPage';
-import SignIn from 'A/components/SignIn';
-import SignUp from 'A/components/SignUp';
-import Dashboard from 'A/components/Dashboard';
+import SignIn from '@/components/SignIn';
+import SignUp from '@/components/SignUp';
+import Dashboard from '@/components/Dashboard';
 import Billing from '@/components/Billing';
 import { useAuth } from '@/contexts/AuthContext';
 
