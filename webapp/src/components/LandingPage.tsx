@@ -3,84 +3,252 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowRight,
-  faChartLine,
-  faLock,
-  faZap,
-  faBarChart,
+  faMemory,
+  faGauge,
+  faGears,
+  faFlask,
   faCheckCircle,
   faStar,
+  faLightbulb,
+  faChartLine,
 } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage: React.FC = () => {
   const features = [
     {
-      icon: faLock,
-      title: 'Budget Enforcement',
-      description: 'Set spending limits and get alerts before exceeding budget thresholds',
+      icon: faMemory,
+      title: 'Memory Optimization',
+      description: 'Reduce KV-cache overhead by 40-60% with intelligent inference optimization',
     },
     {
-      icon: faZap,
-      title: 'Request Deduplication',
-      description: 'Eliminate redundant API calls and reduce costs by up to 40%',
+      icon: faGauge,
+      title: 'Speed Control',
+      description: 'Configure quality and speed tradeoffs to match your application needs',
     },
     {
-      icon: faStar,
-      title: 'Utility Scoring',
-      description: 'Score requests by their actual business value to optimize spending',
+      icon: faGears,
+      title: 'Multi-Model Support',
+      description: 'Works with various LLM architectures - Transformer, RoPE, and custom models',
     },
     {
-      icon: faBarChart,
-      title: 'Analytics Dashboard',
-      description: 'Real-time insights into your AI API spending patterns and trends',
+      icon: faChartLine,
+      title: 'Latency Monitoring',
+      description: 'Automatically flag inappropriate content, violence, or policy violations in real-time.',
+    },
+  ];
+
+  const howItWorks = [
+    {
+      step: 1,
+      title: 'Deploy Model',
+      description: 'Integrate VideoScan with your LLM inference pipeline',
+    },
+    {
+      step: 2,
+      title: 'Configure Quality/Speed',
+      description: 'Set your desired quality level and speed tradeoff parameters',
+    },
+    {
+      step: 3,
+      title: 'Monitor Performance',
+      description: 'Track memory usage, latency, and throughput in real-time',
+    },
+    {
+      step: 4,
+      title: 'Optimize & Scale',
+      description: 'Track objects and people across video frames with state-of-the-art computer vision models.',
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'ML Engineering at CloudScale',
+      content: 'VideoScan reduced our inference costs by 45% while maintaining quality. Game-changer.',
+      avatar: '👩‍💼',
+    },
+    {
+      name: 'Marcus Johnson',
+      role: 'CTO at AI Solutions Inc',
+      content: 'The memory savings allowed us to serve 3x more requests on the same hardware.',
+      avatar: '👨‍💼',
+    },
+    {
+      name: 'Elena Rodriguez',
+      role: 'Research Lead at TechAI',
+      content: 'Best-in-class latency monitoring. We can now optimize with confidence.',
+      avatar: '👩‍💻',
     },
   ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 sm:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/30 dark:to-gray-900" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl mb-6">
-            <span className="text-purple-600">VideoScan</span><br/>Intelligent Video Analysis
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400 mb-10">Extract insights from video with AI-powered scene detection, object tracking, and moderation.</p>
-          <div className="flex items-center justify-center gap-4">
-            <a href="#/signup" className="rounded-lg bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-purple-500">Get Started Free &rarr;</a>
-            <a href="#/pricing" className="rounded-lg border border-gray-300 dark:border-gray-700 px-6 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">Learn More</a>
+      <section className="relative overflow-hidden py-20 sm:py-32 lg:py-40 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-96 h-96 bg-primary-100 dark:bg-primary-900/20 rounded-full blur-3xl -top-40 -right-40"></div>
+          <div className="absolute w-96 h-96 bg-accent-100 dark:bg-accent-900/20 rounded-full blur-3xl -bottom-40 -left-40"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <FontAwesomeIcon icon={faLightbulb} />
+              Intelligent Video Analysis
+            </div>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              Memory-Efficient LLM Inference
+            </h1>
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+              Reduce memory overhead by 40-60% while maintaining model quality. Optimize your inference infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/signup"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-gradient-br text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                Get Started Free
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Link>
+              <a
+                href="/#features"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-gray-800"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </section>
-      {/* Features */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">Powerful Features</h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12">Everything you need</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((f, i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-                <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 mb-4">
-                  <FontAwesomeIcon icon={f.icon} className="text-xl" />
+
+      <section id="features" className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Everything you need for efficient LLM inference
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-lg dark:hover:shadow-gray-700/50 transition-shadow"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-br flex items-center justify-center text-white mb-4">
+                  <FontAwesomeIcon icon={feature.icon} size="lg" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{f.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{f.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* CTA */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-purple-600 px-8 py-16 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to get started?</h2>
-            <p className="text-purple-100 mb-8">Join teams using VideoScan today.</p>
-            <a href="#/signup" className="inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-purple-600 hover:bg-gray-100">Start Free Trial</a>
+
+      <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-16 text-center">
+            How It Works
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {howItWorks.map((item, index) => (
+              <div key={index} className="relative">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-br text-white font-bold">
+                      {item.step}
+                    </div>
+                  </div>
+                  {index < howItWorks.length - 1 && (
+                    <div className="hidden md:block absolute top-6 left-12 w-full h-0.5 bg-gradient-to-r from-primary-600 to-accent-600"></div>
+                  )}
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-16 text-center">
+            What Our Users Say
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <FontAwesomeIcon key={i} icon={faStar} className="text-primary-500" size="sm" />
+                  ))}
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 mb-6 italic">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="text-3xl">{testimonial.avatar}</div>
+                  <div>
+                    <p className="font-bold text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto bg-gradient-br rounded-2xl p-8 sm:p-12 text-white text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            Ready to Optimize Your Inference?
+          </h2>
+          <p className="text-lg mb-8 opacity-90">
+            Join hundreds of companies reducing infrastructure costs with VideoScan
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/signup"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-white text-primary-600 font-semibold hover:bg-gray-50"
+            >
+              Start Free Trial
+              <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+            <a
+              href="/pricing"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-white text-white font-semibold hover:bg-white/10"
+            >
+              View Pricing
+            </a>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
 
 export default LandingPage;
