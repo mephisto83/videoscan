@@ -17,18 +17,18 @@ const LandingPage: React.FC = () => {
   const features = [
     {
       icon: faMemory,
-      title: 'Memory Optimization',
-      description: 'Reduce KV-cache overhead by 40-60% with intelligent inference optimization',
+      title: 'Object Detection',
+      description: 'Identify and classify objects in video streams using state-of-the-art computer vision',
     },
     {
       icon: faGauge,
-      title: 'Speed Control',
-      description: 'Configure quality and speed tradeoffs to match your application needs',
+      title: 'Content Moderation',
+      description: 'Automatically flag inappropriate content or policy violations in real-time',
     },
     {
       icon: faGears,
-      title: 'Multi-Model Support',
-      description: 'Works with various LLM architectures - Transformer, RoPE, and custom models',
+      title: 'Motion Tracking',
+      description: 'Track objects and people across video frames with advanced algorithms',
     },
     {
       icon: faChartLine,
@@ -41,17 +41,17 @@ const LandingPage: React.FC = () => {
     {
       step: 1,
       title: 'Deploy Model',
-      description: 'Integrate VideoScan with your LLM inference pipeline',
+      description: 'Connect VideoScan to your video sources and streams',
     },
     {
       step: 2,
       title: 'Configure Quality/Speed',
-      description: 'Set your desired quality level and speed tradeoff parameters',
+      description: 'Configure detection models and analysis parameters',
     },
     {
       step: 3,
       title: 'Monitor Performance',
-      description: 'Track memory usage, latency, and throughput in real-time',
+      description: 'Review detection results and analytics dashboards',
     },
     {
       step: 4,
@@ -96,10 +96,10 @@ const LandingPage: React.FC = () => {
               Intelligent Video Analysis
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              Memory-Efficient LLM Inference
+              AI-Powered Video Analysis
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              Reduce memory overhead by 40-60% while maintaining model quality. Optimize your inference infrastructure.
+              Analyze video content with computer vision and AI. Detect objects, track movement, and flag content automatically.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -127,7 +127,7 @@ const LandingPage: React.FC = () => {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Everything you need for efficient LLM inference
+              Everything you need for intelligent video analysis
             </p>
           </div>
 
@@ -225,10 +225,10 @@ const LandingPage: React.FC = () => {
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-gradient-br rounded-2xl p-8 sm:p-12 text-white text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Ready to Optimize Your Inference?
+            Ready to Analyze Your Video Content?
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Join hundreds of companies reducing infrastructure costs with VideoScan
+            Start processing video with AI today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
